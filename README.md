@@ -1,12 +1,14 @@
 # DailyCodingProblem
 https://www.dailycodingproblem.com/
 
+[TOC]
+
 
 ## 1 [Eazy]
 This problem was recently asked by Google.  
 
-Given a list of numbers and a number k, return whether any two numbers from the list add up to k.  
-For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.  
+Given a list of numbers and a number k, return whether any two numbers from the list add up to k. 
+For example, given [10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17. 
 
 Bonus: Can you do this in one pass?  
 
@@ -44,3 +46,17 @@ assert deserialize(serialize(node)).left.left.val == 'left.left'
 ```
 
 HINT. https://leetcode.com/problems/serialize-and-deserialize-binary-tree/
+
+If <u>val</u> could be any string that contains spaces or other special characters, some extra job should be done to encode and decode it, e.g. how the C do with character '/'. 
+
+## 4 [Hard]
+
+This problem was asked by Stripe.
+
+Given an array of integers, find the first missing positive integer in linear time and constant space. In other words, find the lowest positive integer that does not exist in the array. The array can contain duplicates and negative numbers as well.
+
+For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]`should give `3`.
+
+You can modify the input array in-place.
+
+HINT. <https://leetcode.com/problems/first-missing-positive/>
