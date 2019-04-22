@@ -60,3 +60,26 @@ For example, the input `[3, 4, -1, 1]` should give `2`. The input `[1, 2, 0]`sho
 You can modify the input array in-place.
 
 HINT. <https://leetcode.com/problems/first-missing-positive/>
+
+
+
+## 5 [medium]
+
+This problem was asked by Jane Street.
+
+`cons(a, b)` constructs a pair, and `car(pair)` and `cdr(pair)` returns the first and last element of that pair. For example, `car(cons(3, 4))` returns `3`, and `cdr(cons(3, 4))` returns `4`.
+
+Given this implementation of cons:
+
+```
+def cons(a, b):
+    def pair(f):
+        return f(a, b)
+    return pair
+```
+
+Implement `car` and `cdr`.
+
+HINT1. <https://galaiko.rocks/posts/2018-07-06/>
+
+HINT2. <https://stackoverflow.com/questions/52481607/dont-understand-the-inner-function-in-python>
