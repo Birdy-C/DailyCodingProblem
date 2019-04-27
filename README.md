@@ -153,3 +153,12 @@ Follow-up: Can you do this in O(N) time and constant space?
 HINT. <http://blog.gainlo.co/index.php/2016/12/02/uber-interview-question-maximum-sum-non-adjacent-elements/>
 
 <https://www.geeksforgeeks.org/maximum-sum-such-that-no-two-elements-are-adjacent/>
+
+
+
+## 10 [Medium]
+
+This problem was asked by Apple.
+
+Implement a job scheduler which takes in a function `f` and an integer `n`, and calls `f` after `n` milliseconds.
+
