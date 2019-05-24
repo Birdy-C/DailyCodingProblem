@@ -559,3 +559,43 @@ For example, given the string "race", you should return "ecarace", since we can 
 As another example, given the string "google", you should return "elgoogle".
 
 HINT. <https://www.geeksforgeeks.org/minimum-insertions-to-form-a-palindrome-dp-28/>
+
+
+
+## 35 [Hard]
+
+This problem was asked by Google.
+
+Given an array of strictly the characters 'R', 'G', and 'B', segregate the values of the array so that all the Rs come first, the Gs come second, and the Bs come last. You can only swap elements of the array.
+
+Do this in linear time and in-place.
+
+For example, given the array ['G', 'B', 'R', 'R', 'B', 'R', 'G'], it should become ['R', 'R', 'R', 'G', 'G', 'B', 'B'].
+
+HINT. <https://leetcode.com/problems/sort-colors/>
+
+
+
+## 36 [Medium]
+
+This problem was asked by Dropbox.
+
+Given the root to a binary search tree, find the second largest node in the tree.
+
+HINT. <https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/>
+
+
+
+## 37 [Easy]
+
+This problem was asked by Google.
+
+The power set of a set is the set of all its subsets. Write a function that, given a set, generates its power set.
+
+For example, given the set `{1, 2, 3}`, it should return `{{}, {1}, {2}, {3}, {1, 2}, {1, 3}, {2, 3}, {1, 2, 3}}`.
+
+You may also use a list or array to represent a set.
+
+HINT. <https://leetcode.com/problems/subsets/>
+
+<https://leetcode.com/problems/subsets/>
