@@ -582,7 +582,7 @@ This problem was asked by Dropbox.
 
 Given the root to a binary search tree, find the second largest node in the tree.
 
-HINT. <https://leetcode.com/problems/second-minimum-node-in-a-binary-tree/>
+HINT. <<https://www.geeksforgeeks.org/second-largest-element-in-binary-search-tree-bst/>>
 
 
 
@@ -599,3 +599,13 @@ You may also use a list or array to represent a set.
 HINT. <https://leetcode.com/problems/subsets/>
 
 <https://leetcode.com/problems/subsets/>
+
+
+
+## 38 [Hard]
+
+This problem was asked by Microsoft.
+
+You have an N by N board. Write a function that, given N, returns the number of possible arrangements of the board where N queens can be placed on the board without threatening each other, i.e. no two queens share the same row, column, or diagonal.
+
+HINT. <https://leetcode.com/problems/n-queens/>
