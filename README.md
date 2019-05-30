@@ -629,7 +629,7 @@ Implement Conway's Game of Life. It should be able to be initialized with a star
 
 You can represent a live cell with an asterisk (`*`) and a dead cell with a dot (`.`).
 
-HINT. <https://leetcode.com/problems/game-of-life/>  (It's a finite board)
+HINT. <https://leetcode.com/problems/game-of-life/>  (It's in a finite board, you could refer to the solution for more information. )
 
 
 
@@ -644,3 +644,49 @@ For example, given [6, 1, 3, 3, 3, 6, 6], return 1. Given [13, 19, 13, 13], retu
 Do this in O(N) time and O(1) space.
 
 HINT. <https://leetcode.com/problems/single-number-ii/>
+
+
+
+## 41 [Medium]
+
+This problem was asked by Facebook.
+
+Given an unordered list of flights taken by someone, each represented as (origin, destination) pairs, and a starting airport, compute the person's itinerary. If no such itinerary exists, return null. If there are multiple possible itineraries, return the lexicographically smallest one. All flights must be used in the itinerary.
+
+For example, given the list of flights [('SFO', 'HKO'), ('YYZ', 'SFO'), ('YUL', 'YYZ'), ('HKO', 'ORD')] and starting airport 'YUL', you should return the list ['YUL', 'YYZ', 'SFO', 'HKO', 'ORD'].
+
+Given the list of flights [('SFO', 'COM'), ('COM', 'YYZ')] and starting airport 'COM', you should return null.
+
+Given the list of flights [('A', 'B'), ('A', 'C'), ('B', 'C'), ('C', 'A')] and starting airport 'A', you should return the list ['A', 'B', 'C', 'A', 'C'] even though ['A', 'C', 'A', 'B', 'C'] is also a valid itinerary. However, the first one is lexicographically smaller.
+
+HINT. <https://leetcode.com/problems/reconstruct-itinerary/>
+
+
+
+## 42 [Hard]
+
+This problem was asked by Google.
+
+Given a list of integers S and a target number k, write a function that returns a subset of S that adds up to k. If such a subset cannot be made, then return null.
+
+Integers can appear more than once in the list. You may assume all numbers in the list are positive.
+
+For example, given S = [12, 1, 61, 5, 9, 2] and k = 24, return [12, 9, 2, 1] since it sums up to 24.
+
+HINT. <https://leetcode.com/problems/combination-sum/>
+
+
+
+## 43 [Easy]
+
+This problem was asked by Amazon.
+
+Implement a stack that has the following methods:
+
+- push(val), which pushes an element onto the stack
+- pop(), which pops off and returns the topmost element of the stack. If there are no elements in the stack, then it should throw an error or return null.
+- max(), which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
+
+Each method should run in constant time.
+
+HINT. <https://leetcode.com/problems/min-stack/>
