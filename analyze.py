@@ -22,7 +22,7 @@ mdfiles = [f for f in filelist if re.search("^[0-9]+-[0-9]+.md", f)]
 print(mdfiles)
 
 companymap = dict()
-wholeregex = r"## [0-9]+ \[[A-Z][a-z]*\][\n]*This problem was asked by [A-Za-z ]+\."
+wholeregex = r"## [0-9]+ \[[A-Z][a-z]*\][\n]*This problem[A-Za-z ]+\."
 
 for mdfile in mdfiles:
     with open(mdfile, 'r') as file:
@@ -41,7 +41,7 @@ for mdfile in mdfiles:
 with open('output.md', "w+") as f:
     f.write("| company | problem set |\n")
     f.write("| ------- | ----------- |\n")
-    for key in companymap:
+    for key in sorted(companymap):
         print key, companymap[key]
         f.write("| ")
         f.write(key)
