@@ -11,26 +11,35 @@ def warpstring(mdfile, problemnumber):
     return "[" + problemnumber + "](" +url + mdfile + '#' + problemurl + ")"
 
 def urlkey(problemurl):
-    print(problemurl)
     problemnumber = re.search(r"\[[0-9]+ \[", problemurl).group()[1:-2]
     return int(problemnumber)
+
+def mapfile(mdfile):
+    number = mdfile[:-3]
+    return '[' + number + "](" + mdfile + ")\n"
+
+
+def filekey(mdfile):
+    print mdfile
+    problemnumber = re.search(r"[0-9]+\.md", mdfile).group()[:-3]
+    return int(problemnumber)
+
 
 folder = '.'
 filelist = os.listdir(folder)
 print(filelist)
 mdfiles = [f for f in filelist if re.search("^[0-9]+-[0-9]+.md", f)]
+mdfiles = sorted(mdfiles, key = filekey)
 print(mdfiles)
 
 companymap = dict()
-wholeregex = r"## [0-9]+ \[[A-Z][a-z]*\][\n]*This problem[A-Za-z ]+\."
-
+wholeregex = r"[0-9]+ \[[A-Z][a-z]*\][\n]*This problem[A-Za-z ]+\."
 for mdfile in mdfiles:
     with open(mdfile, 'r') as file:
         data = file.read()
         problemlist = re.findall(wholeregex, data)
         for problem in problemlist:
-            print(problem)
-            problemnumber = re.search(r"## [0-9]+ \[[A-Z][a-z]+\]", problem).group()[3:]
+            problemnumber = re.search(r"[0-9]+ \[[A-Z][a-z]+\]", problem).group()
             companyname = re.search(r"by [A-Za-z ]+\.", problem).group()[3:-1]
             print(problemnumber)
             print(companyname)
@@ -38,11 +47,21 @@ for mdfile in mdfiles:
                 companymap[companyname] = set()
             companymap[companyname].add(warpstring(mdfile, problemnumber))
 
+
+
+# print out the readme.md
 with open('output.md', "w+") as f:
+    f.write("# DailyCodingProblem\n \
+https://www.dailycodingproblem.com/\n\n\
+## Problem List\n\n")
+
+    mdfilestring = map(mapfile, mdfiles)
+    f.write("\n".join(mdfilestring))
+
+    f.write("## Tag\n\n")
     f.write("| company | problem set |\n")
     f.write("| ------- | ----------- |\n")
     for key in sorted(companymap):
-        print key, companymap[key]
         f.write("| ")
         f.write(key)
         f.write(" | ")
