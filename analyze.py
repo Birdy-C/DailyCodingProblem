@@ -50,7 +50,7 @@ for mdfile in mdfiles:
 
 
 # print out the readme.md
-with open('output.md', "w+") as f:
+with open('README.md', "w+") as f:
     f.write("# DailyCodingProblem\n \
 https://www.dailycodingproblem.com/\n\n\
 ## Problem List\n\n")
